@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Oxygen', sans-serif;
+    font-size: 16px;
+    color: #212121;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0;
+    color: orange;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    background-color: #006540;
+    color: white;
+    padding: 4rem 1rem;
+}
+
+footer {
+    background-color: #4c4c4e;
+    color: white;
+    padding: 4rem 1rem;
+    margin-top: 4rem;
+}
+
+header p,
+footer p {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+}
+
+header p {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+nav {
+    background-color: #eaeaea;
+    color: #1c8b62;
+    padding: 1rem;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+nav ul li::after {
+    content: " § ";
+}
+
+nav ul li:last-child::after {
+    content: "";
+}
+
+nav ul li a {
+    color: orange;
+}
+
+main {
+    padding: 0 1rem;
+}
+
+main p {
+    text-align: justify;
+}
+
+.related-panel h3 {
+    text-align: center;
+}
+
+.related-panel img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+}
+
+figure {
+    display: block;
+    width: 100%;
+    margin: 0;
+    position: relative;
+}
+
+figure img {
+    display: block;
+    width: 100%;
+}
+
+figure figcaption {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    font-family: 'Courier Prime', monospace;
+    font-size: 16px;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid black;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+}
+
+td,
+th {
+    border: 1px solid black;
+    padding: 10px 20px;
+}
+
+th {
+    background-color: orange;
+    color: white;
+    font-size: 0.9rem;
+}
+
+td {
+    text-align: center;
+}
+
+
+@media screen and (min-width: 992px) {
+    html {
+        font-size: 16px;
+    }
+
+    main {
+        padding: 0;
+    }
+
+    .container {
+        display: block;
+        width: 992px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .columns-2 {
+        display: flex;
+        /* salikt horizontāli (column: vertikāli) */
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+
+    .columns-2 article {
+        /* platuma attiecība 2:1 */
+        flex: 2;
+        margin-right: 0.5rem;
+    }
+
+    .columns-2 aside {
+        flex: 1;
+        margin-left: 0.5rem;
+    }
+
+    .related-grid {
+        display: grid;
+        /* kolonnu attiecība 1:1 */
+        grid-template-columns: 1fr 1fr;
+        column-gap: 1rem;
+        row-gap: 1rem;
+    }
+
+}
